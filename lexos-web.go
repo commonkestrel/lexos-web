@@ -40,6 +40,7 @@ func socket(c *gin.Context) {
             message = []byte("0")
         }
         ws.WriteMessage(websocket.TextMessage, message)
+        return
     }
     msg := make(map[string]string)
     msg["lexile"] = fmt.Sprint(lexile)
