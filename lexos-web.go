@@ -61,4 +61,5 @@ func main() {
     r.GET("/", home)
     r.GET("/ws", socket)
     r.Run(":80")
+    log.Println("Server running on http://localhost")
 }
