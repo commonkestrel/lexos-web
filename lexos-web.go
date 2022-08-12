@@ -59,5 +59,5 @@ func main() {
     r := gin.Default()
     r.GET("/", home)
     r.GET("/ws", socket)
-    r.Run(":8080")
+    r.Run(":80")
 }
