@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .center {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <form id="isbn">
+                <input id="isbn-input" type="text" placeholder="ISBN">
+                <button type="submit">Send</button>
+            </form>
+            <p id="error"></p>
+            <p id="lexile"></p>
+            <p id="atos"></p>
+            <p id="ar"></p>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                ws = new WebSocket("ws://localhost:8080/ws");
+                ws.onopen = (event) => {
+                    ws.onmessage = (event) => {
+                        console.log(event.data);
+
+                        if (event.data == "0") {
+                            $("#error").html("Invalid ISBN!")
+                        } else if (event.data == "1") {
+                            $("#error").html("Encoutered an error!")
+                        } else {
+                            const data = JSON.parse(event.data)
+                            console.log(data)
+                            $("#lexile").html(`Lexile level: ${data["lexile"]}`)
+                            $("#atos").html(`AR level: ${data["atos"]}`)
+                            $("#ar").html(`AR points: ${data["ar"]}`)
+                        }
+                    }
+                    
+                }
+                $("#isbn").submit((e) => {
+                    e.preventDefault();
+                    ws.send($("#isbn-input").val());
+                });
+            });
+        </script>
+    </body>
+</html>
