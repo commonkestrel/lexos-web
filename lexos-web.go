@@ -60,7 +60,7 @@ func main() {
     r := gin.Default()
     r.GET("/", home)
     r.GET("/ws", socket)
-    log.Println("Server running on http://localhost")
+    log.Println("Starting server on http://localhost:80")
     err := r.Run(":80")
     if err != nil {
         log.Fatal(err)

@@ -47,11 +47,12 @@
 
                     ws.onmessage = (event) => {
                         console.log(event.data);
+                        
 
                         if (event.data == "0") {
                             $("#error").html("Invalid ISBN!")
                         } else if (event.data == "1") {
-                            $("#error").html("Encoutered an error!")
+                            $("#error").html("Encoutered an unexpected error!")
                         } else {
                             const data = JSON.parse(event.data)
                             console.log(data)
