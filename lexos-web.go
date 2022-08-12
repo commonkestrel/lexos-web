@@ -61,5 +61,8 @@ func main() {
     r.GET("/", home)
     r.GET("/ws", socket)
     log.Println("Server running on http://localhost")
-    r.Run(":80")
+    err := r.Run(":80")
+    if err != nil {
+        log.Fatal(err)
+    }
 }
