@@ -30,7 +30,7 @@
                     $("#ar").html("")
                     $("#error").html("")
                     
-                    let ws = new WebSocket("ws://localhost:8080/ws");
+                    let ws = new WebSocket("ws://localhost/ws");
 
                     ws.onopen = (event) => {
                         ws.send($("#isbn-input").val());
