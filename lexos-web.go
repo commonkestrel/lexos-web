@@ -17,6 +17,7 @@ var upgrader = websocket.Upgrader{
 }
 
 func socket(c *gin.Context) {
+    log.Println("socket")
     ws, err := upgrader.Upgrade(c.Writer, c.Request, nil)
     if err != nil {
         log.Println(err)
@@ -45,10 +46,6 @@ func socket(c *gin.Context) {
     msg["atos"] = fmt.Sprint(atos)
     msg["ar"] = fmt.Sprint(ar)
 
-    if err != nil {
-        log.Println(err)
-        
-    }
     ws.WriteJSON(msg)
 }
 
