@@ -29,8 +29,17 @@
                     $("#atos").html("")
                     $("#ar").html("")
                     $("#error").html("")
-                    
-                    let ws = new WebSocket("ws://localhost/ws");
+
+                    const loc = window.location
+                    let new_uri
+                    if (loc.protocol === "https:") {
+                        new_uri = "wss:";
+                    } else {
+                        new_uri = "ws:"
+                    }
+                    new_uri += "//" + loc.host + "/ws"
+
+                    let ws = new WebSocket(new_uri);
 
                     ws.onopen = (event) => {
                         ws.send($("#isbn-input").val());
