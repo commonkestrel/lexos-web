@@ -34,10 +34,11 @@ func socket(c *gin.Context) {
     lexile, atos, ar, err := lexos.Get(string(isbn))
     if err != nil {
         var message []byte
-        if err.Error() == lexos.BrowserErr {
-            message = []byte("1")
-        } else if err.Error() == lexos.InvalidISBN {
-            message = []byte("0")
+        if err == lexos.InvalidISBN {
+            message = []byte("error:0")
+        } else {
+            log.Println(err.Error())
+            message = []byte("error:" + err.Error())
         }
         ws.WriteMessage(websocket.TextMessage, message)
         return
@@ -55,6 +56,7 @@ func home(c *gin.Context) {
 }
 
 func main() {
+    lexos.Install()
     gin.SetMode(gin.ReleaseMode)
 
     r := gin.Default()
