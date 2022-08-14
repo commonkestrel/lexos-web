@@ -49,10 +49,12 @@
                         console.log(event.data);
                         
 
-                        if (event.data == "0") {
-                            $("#error").html("Invalid ISBN!")
-                        } else if (event.data == "1") {
-                            $("#error").html("Encoutered an unexpected error!")
+                        if (event.data.includes("error:")) {
+                            if (event.data == "error:0") {
+                                $("#error").html("Invalid ISBN!")
+                            } else {
+                                $("#error").html("Encoutered an unexpected error!")
+                            }
                         } else {
                             const data = JSON.parse(event.data)
                             console.log(data)
