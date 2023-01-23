@@ -3,7 +3,7 @@ module example/lexos-web
 go 1.19
 
 require (
-	github.com/Jibble330/lexos v0.0.0-20220812035044-291ea4d8cb2c // indirect
+	github.com/commonkestrel/lexos v0.0.0-20220812035044-291ea4d8cb2c // indirect
 	github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.8.1 // indirect
