@@ -5,7 +5,7 @@ import (
     "log"
     "net/http"
 
-    "github.com/Jibble330/lexos"
+    "github.com/commonkestrel/lexos"
     "github.com/gin-gonic/gin"
     "github.com/gorilla/websocket"
 )
