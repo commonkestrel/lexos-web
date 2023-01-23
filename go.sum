@@ -1,7 +1,7 @@
-github.com/Jibble330/lexos v0.0.0-20220808170905-8ea948de705c h1:irenbCdmTCHgTAf8o3cqXxgggX1WomacbTUNiuDY8Gc=
-github.com/Jibble330/lexos v0.0.0-20220808170905-8ea948de705c/go.mod h1:VWoDq21EOBSCcUBHJkn26wSPZsAFZUsOzK33DCTMK7o=
-github.com/Jibble330/lexos v0.0.0-20220812035044-291ea4d8cb2c h1:uaqzVo93OmDJOgyTA75oWy3QLZ7BXhBw0h6q/G86G/0=
-github.com/Jibble330/lexos v0.0.0-20220812035044-291ea4d8cb2c/go.mod h1:NXiYbnmRdpUFbzwedAeOcy7PMWqLGwejDHSez32sYX0=
+github.com/commonkestrel/lexos v0.0.0-20220808170905-8ea948de705c h1:irenbCdmTCHgTAf8o3cqXxgggX1WomacbTUNiuDY8Gc=
+github.com/commonkestrel/lexos v0.0.0-20220808170905-8ea948de705c/go.mod h1:VWoDq21EOBSCcUBHJkn26wSPZsAFZUsOzK33DCTMK7o=
+github.com/commonkestrel/lexos v0.0.0-20220812035044-291ea4d8cb2c h1:uaqzVo93OmDJOgyTA75oWy3QLZ7BXhBw0h6q/G86G/0=
+github.com/commonkestrel/lexos v0.0.0-20220812035044-291ea4d8cb2c/go.mod h1:NXiYbnmRdpUFbzwedAeOcy7PMWqLGwejDHSez32sYX0=
 github.com/creack/pty v1.1.9/go.mod h1:oKZEueFk5CKHvIhNR5MUki03XCEU+Q6VDXinZuGJ33E=
 github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964 h1:y5HC9v93H5EPKqaS1UYVg1uYah5Xf51mBfIoWehClUQ=
 github.com/danwakefield/fnmatch v0.0.0-20160403171240-cbb64ac3d964/go.mod h1:Xd9hchkHSWYkEqJwUGisez3G1QY8Ryz0sdWrLPMGjLk=
